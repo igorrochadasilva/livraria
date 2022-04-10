@@ -1,0 +1,157 @@
+.cadastro{
+    height: auto;
+    margin: 140px auto auto auto;
+    max-width: 1280px;
+  
+    display: flex;
+    flex-direction: column;
+    
+    
+    .add{              
+        width: 200px;
+        text-align: left;
+        margin-bottom: 20px;
+        
+        button{
+            
+            border: 0;
+            border-radius: 5px;
+            background-color: #51b049;
+            
+            color: var(--text-white);
+            text-transform: uppercase;
+            
+            margin-left: 10px;
+            padding: 10px;
+            
+            transition: 0.3s all ease-in-out;
+            cursor: pointer;
+            &:hover{
+              transform: scale(1.1)              
+            }
+        };
+        
+        
+        @media (max-width: 768px){
+          width: 100%;
+          text-align: center;
+        }
+    }
+    
+    .books {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    
+        .book {
+          width: 300px;
+          height: auto;
+          display: flex;
+          flex-direction: column;
+    
+          margin: 0 10px 30px 10px;
+    
+          background-color: var(--bg-black);
+          border-radius: 30px;
+    
+          transition: 0.3s all ease-in-out;
+    
+          &:hover {
+            transform: translate(0px, -10px);
+          }
+    
+          .image {
+            img {
+              border-radius: 30px 30px 0 0;
+            }
+          }
+    
+          .info {
+            padding: 10px;
+            color: var(--text-white);
+    
+            .name {
+              color: var(--bg-red);
+              height: 60px;
+            }
+          }
+    
+          .buttons {
+            width: 100%;
+            display: flex;
+            margin-bottom: 10px;
+    
+            padding: 10px;
+    
+            button {
+              width: 80%;
+              height: 40px;
+    
+              border-radius: 30px 0 0 30px;
+              border: 0;
+              margin: auto;
+    
+              text-transform: uppercase;
+              font-weight: bold;
+              color: var(--text-white);
+    
+              background-color: #e0a548;
+    
+              transition: 0.3s all ease-in-out;
+              cursor: pointer;
+              
+              &:last-child{
+                background-color: #ea0001;
+                border-radius: 0 30px 30px 0;
+              }
+              
+              &.unavailable{
+                filter: brightness(0.5);
+                pointer-events: none;
+              }
+            }
+    
+            span {
+              margin: auto;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+    
+              width: 80%;
+              height: 40px;
+    
+              border-radius: 40px;
+              background-color: #ea0001;
+    
+              color: var(--text-white);
+            }
+          }
+        }
+    
+        .unavailableBooks,
+        .notFound {
+          width: 100%;
+          max-width: 300px;
+          margin: auto;
+          padding: 10px;
+    
+          text-align: center;
+          color: var(--text-white);
+          border-radius: 30px;
+          background-color: var(--warning);
+        }
+      }
+    
+      @media (max-width: 768px) {
+        .search {
+          // position: relative;
+          // left: 15px;
+        }
+    
+        .books {
+          justify-content: center;
+        }
+      }
+}

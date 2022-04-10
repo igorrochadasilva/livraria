@@ -1,0 +1,73 @@
+:root {
+  --bg-red: #f64050;
+  --bg-black: #292d33;
+  --bg-gray: #f2f2f2;
+  --bg-white: #ffffff;
+  --text-white: #ffffff;
+  --text-black: #292d33;  
+  --warning: #ff8f00;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: var(--bg-gray);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  @media (max-width: 1080px) {
+    font-size: 93.75%; // 15px
+  }
+
+  @media (max-width: 768px) {
+    font-size: 87.5%; // 14px
+  }
+}
+
+
+.react-modal-overlay{
+  background: rgba(0, 0,0,0.5);
+  
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.react-modal{
+  width: 100%;
+  max-width: 576px ;
+  background: var(--bg-white);
+  padding: 3rem;
+  position: relative ;
+}
+
+.react-modal-close{
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+  border: 0;
+  background: transparent;
+  cursor: pointer;  
+  
+  svg{
+    width: 20px;
+    height: 20px;
+  }
+}

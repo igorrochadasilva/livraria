@@ -1,0 +1,159 @@
+.home {
+  height: auto;
+  margin: 80px auto auto auto;
+  max-width: 1280px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .search {
+    margin: 80px 0 40px 0;
+    display: flex;
+    max-width: 500px;
+    width: 100%;
+
+    input {
+      width: 100%;
+      border: 0;
+      border-radius: 15px;
+
+      height: 40px;
+      padding-left: 20px;
+      margin: 10px 0;
+
+      font-size: 1rem;
+      font-weight: 600;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .iconSearch {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 30px;
+      height: 30px;
+
+      position: relative;
+      top: 15px;
+      left: -35px;
+
+      border-radius: 30px;
+      background-color: var(--bg-black);
+    }
+  }
+
+  .books {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .book {
+      width: 300px;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+
+      margin: 0 10px 30px 10px;
+
+      background-color: var(--bg-black);
+      border-radius: 30px;
+
+      transition: 0.3s all ease-in-out;
+
+      &:hover {
+        transform: translate(0px, -20px);
+      }
+
+      .image {
+        img {
+          border-radius: 30px 30px 0 0;
+        }
+      }
+
+      .info {
+        padding: 10px;
+        color: var(--text-white);
+
+        .name {
+          color: var(--bg-red);
+          height: 60px;
+        }
+      }
+
+      .buttons {
+        width: 100%;
+        display: flex;
+        margin-bottom: 10px;
+
+        padding: 10px;
+
+        button {
+          width: 80%;
+          height: 40px;
+
+          border-radius: 40px;
+          border: 0;
+          margin: auto;
+
+          text-transform: uppercase;
+          font-weight: bold;
+          color: var(--text-white);
+
+          background-color: #41a85f;
+
+          transition: 0.3s all ease-in-out;
+          cursor: pointer;
+          &:hover {
+            transform: scale(1.09);
+          }
+        }
+
+        span {
+          margin: auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          width: 80%;
+          height: 40px;
+
+          border-radius: 40px;
+          background-color: #ea0001;
+
+          color: var(--text-white);
+        }
+      }
+    }
+
+    .unavailableBooks,
+    .notFound {
+      width: 100%;
+      max-width: 300px;
+      margin: auto;
+      padding: 10px;
+
+      text-align: center;
+      color: var(--text-white);
+      border-radius: 30px;
+      background-color: var(--warning);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .search {
+      // position: relative;
+      // left: 15px;
+    }
+
+    .books {
+      justify-content: center;
+    }
+  }
+}

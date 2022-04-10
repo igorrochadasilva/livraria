@@ -1,0 +1,48 @@
+.bookModal{
+    h1{
+        text-align: center;
+    }
+    form{
+        display: flex;
+        flex-direction: column;      
+        
+        input{
+            margin-bottom: 10px;
+            padding-left: 20px;
+            
+            height: 40px;
+            
+            border-radius: 30px;            
+            border:1px solid var(--bg-red);
+            
+            font-weight: bold;
+            color: var(--text-black);
+            
+            &:focus {
+                outline: none;
+            }
+        }
+        
+        button{
+            height: 40px;
+            width: 200px;
+            margin: 20px auto auto auto;
+            
+            background-color: #51b049;
+            
+            border-radius: 10px;
+            border: 0;
+            
+            color: var(--text-white);
+            text-transform: uppercase;
+            font-weight: bold;
+            cursor: pointer;
+            
+            transition: 0.3s all ease-in-out;
+            
+            &:hover{
+                filter: brightness(0.9);
+            }
+        }
+    }
+}
